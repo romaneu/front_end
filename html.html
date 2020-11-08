@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding HTML</title>
+    <link rel="stylesheet" href="/Users/yossel/Desktop/coding/Yossel´s coding journey/resouces /css/styles.css">
+</head>
+<body>
+    <span><a href="/Users/yossel/Desktop/coding/Yossel´s coding journey/index.html" class="back">HOME</a></span>
+    <header>
+        <h2>Understanding HTML</h2>
+    </header>
+    <ul>
+        <li><a href="#1">Basics</a></li>
+        <li><a href="#2">The Head/Metadata</a></li>
+        <li><a href="#3">HTML Tags</a></li>
+        <li><a href="#4">Table Basics</a></li>
+        <li><a href="#5">Forms- Basic</a></li>
+        <li><a href="#6">Forms- Validation</a></li>
+        <li><a href="#7">Semantic HTML</a></li>
+        <li><a href="https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412">Accessibility</a></li>
+
+
+    </ul>
+    <div id="1">
+    <h2>Basics</h2>
+        <ul>
+            <li>HTML stands for HyperText Markup Language and is used to create the structure and content of a webpage.</li>
+            <li>Most HTML elements contain opening and closing tags with raw text or other HTML tags between them.</li>
+            <li>HTML elements can be nested inside other elements. The enclosed element is the child of the enclosing parent element.</li>
+            <li>Any visible content should be placed within the opening and closing "body" tags.</li>
+            <li>Headings and sub-headings, "h1" to "h6" tags, are used to enlarge text.</li>
+            <li>"p", "span" and "div" tags specify text or blocks</li>
+            <li>The "em" and "strong" tags are used to emphasize text.</li>
+            <li>Line breaks are created with the "br" tag.</li>
+            <li>Ordered lists ("ol") are numbered and unordered lists ("ul") are bulleted.</li>
+            <li>Images ("img") and videos ("video") can be added by linking to an existing source.</li>
+            </ul>
+    </div>
+    <div id="2">
+    <h2>The Head/Metadata</h2>
+        <ul>
+            <li>"!DOCTYPE html", the declaration specifying the version of HTML for the browser</li>
+            <li>The "html" tags that enclose all of your HTML code</li>
+            <li>The "head" tag that contains the metadata of a webpage, such as its "title""/title"</li>
+            </ul>
+    <div id="3">
+    <h2>HTML Tags</h2>
+        <ol>
+            <li>The "!DOCTYPE html" declaration should always be the first line of code in your HTML files. This lets the browser know what version of HTML to expect.</li>  
+            <li>The "html" element will contain all of your HTML code.</li>  
+            <li>Information about the web page, like the title, belongs within the "head" of the page.</li>
+            <li>A webpage’s title appears in a browser’s tab.</li>
+            <li>Anchor tags ("a>") are used to link to internal pages, external pages or content on the same page.</li>
+            <li>You can create sections on a webpage and jump to them using "a" tags and adding ids to the elements you wish to jump to.</li>
+            <li>Whitespace between HTML elements helps make code easier to read while not changing how elements appear in the browser.</li>
+            <li>Indentation also helps make code easier to read. It makes parent-child relationships visible.</li>
+            <li>Comments are written in HTML using the following syntax: "!-- comment --"".</li>
+        </ol>
+    </div>
+    <div id="4"> 
+    <h2>Table Basics</h2>
+        <ul>
+            <li>The "table" element creates a table.</li>
+            <li>The "tr" element adds rows to a table.</li>
+            <li>To add data to a row, you can use the "td" element.</li>
+            <li>Table headings clarify the meaning of data. Headings are added with the "th" element.</li>
+            <li>Table data can span columns using the colspan attribute.</li>
+            <li>Table data can span rows using the rowspan attribute.</li>
+            <li>Tables can be split into three main sections: a head, a body, and a footer.</li>
+            <li>A table’s head is created with the "thead" element.</li>
+            <li>A table’s body is created with the "tbody" element.</li>
+            <li>A table’s footer is created with the "tfoot" element.</li>
+            <li>All the CSS properties you learned about in this course can be applied to tables and their data.</li>
+        </ul>
+        <div id="5"> 
+            <h2>Forms</h2>
+                <ul>
+                    <li>The purpose of a "form" is to allow users to input information and send it.</li>
+                    <li>The "form"‘s action attribute determines where the form’s information goes.</li>
+                    <li>The "form"‘s method attribute determines how the information is sent and processed.</li>
+                    <li>To add fields for users to input information we use the "input" element and set the type attribute to a field of our choosing:</li>
+                    <li>Setting type to "text" creates a single row field for text input.</li>
+                    <li>Setting type to "password" creates a single row field that censors text input.</li>
+                    <li>Setting type to "number" creates a single row field for number input.</li>
+                    <li>Setting type to "range" creates a slider to select from a range of numbers.</li>
+                    <li>Setting type to "checkbox" creates a single checkbox which can be paired with other checkboxes.</li>
+                    <li>Setting type to "radio" creates a radio button that can be paired with other radio buttons.</li>
+                    <li>Setting type to "list" will pair the "input" with a ""datalist"" element if the id of both are the same.</li>
+                    <li>Setting type to "submit" creates a submit button.</li>
+                    <li>A ""select"" element is populated with ""option"" elements and renders a dropdown list selection.</li>
+                    <li>A ""datalist"" element is populated with ""option"" elements and works with an ""input"" to search through choices.</li>
+                    <li>A ""textarea" element is a text input field that has a customizable area.</li>
+                    <li>When a ""form"" is submitted, the name of the fields that accept input and the value of those fields are sent as name=value pairs.</li>
+                </ul>
+        <div id="6"> 
+            <h2>Forms- Validation</h2>
+                <ul>
+                    <li>Client-side validations happen in the browser before information is sent to a server.</li>
+                    <li>Adding the required attribute to an input related element will validate that the input field has information in it.</li>
+                    <li>Assigning a value to the min attribute of a number input element will validate an acceptable minimum value.</li>
+                    <li>Assigning a value to the max attribute of a number input element will validate an acceptable maximum value.</li>
+                    <li>Assigning a value to the minlength attribute of a text input element will validate an acceptable minimum number of characters.</li>
+                    <li>Assigning a value to the maxlength attribute of a text input element will validate an acceptable maximum number of characters.</li>
+                    <li>Assigning a regex to pattern matches the input to the provided regex.</li>
+                    <li>If validations on a ""form"" do not pass, the user gets a message explaining why and the <form> cannot be submitted.</li>
+                </ul>
+        <div id="7"> 
+            <h2>Forms- Validation</h2>
+                <ul>
+                    <li>Semantic HTML introduces meaning to a page through specific elements that provide context as to what is in between the tags.</li>
+                    <li>Semantic HTML is a modern standard and makes a website accessible for people who use screen readers to translate the webpage and improves your website’s SEO.</li>
+                    <li>""header"", ""nav"" , ""main"" and ""footer"" create the basic structure of the webpage.</li>
+                    <li>!section! defines elements in a document, such as chapters, headings, or any other area of the document with the same theme.</li>
+                    <li>!article! holds content that makes sense on its own such as articles, blogs, comments, etc.</li>
+                    <li>!aside! contains information that is related to the main content, but not required in order to understand the dominant information.</li>
+                    <li>!figure! encapsulates all types of media.</li>
+                    <li>!figcaption! is used to describe the media in !figure!.</li>
+                    <li>!video!, !embed!, and !audio! elements are used for media files</li>
+                </ul>        
+    </div>
+    <span><a href="/Users/yossel/Desktop/coding/Yossel´s coding journey/index.html" class="back">HOME</a></span>
+</body>
+</html>

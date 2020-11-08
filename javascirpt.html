@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="/Users/yossel/Desktop/coding/Yossel´s coding journey/resouces /css/styles.css">
+</head>
+<body>
+    <span><a href="/Users/yossel/Desktop/coding/Yossel´s coding journey/index.html" class="back">HOME</a></span>
+    <header>
+        <h1>JavaScript</h1>
+        <ul>
+            <li><a href="#1">Data Types</a></li>
+            <li><a href="#2">Arithmetic Operators</a></li>
+            <li><a href="#3">Methods</a></li>
+            <li><a href="#4">Built-in Objects</a></li>
+            <li><a href="#5">Variables</a></li>
+        </ul>
+    </header>
+    <main>
+        <h2 id="1">Data Types</h2>
+            <p>Data types are the classifications we give to the different kinds of data that we use in programming. In JavaScript, there are seven fundamental data types:</p>
+                <ol>
+                    <li>Number: Any number, including numbers with decimals: 4, 8, 1516, 23.42.</li>
+                    <li>String: Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by single quotes: ' ... ' or double quotes " ... ". Though we prefer single quotes. Some people like to think of string as a fancy word for text.</li>
+                    <li>Boolean: This data type only has two possible values— either true or false (without quotes). It’s helpful to think of booleans as on and off switches or as the answers to a “yes” or “no” question.</li>
+                    <li>Null: This data type represents the intentional absence of a value, and is represented by the keyword null (without quotes).</li>
+                    <li>Undefined: This data type is denoted by the keyword undefined (without quotes). It also represents the absence of a value though it has a different use than null.</li>
+                    <li>Symbol: A newer feature to the language, symbols are unique identifiers, useful in more complex coding. </li>
+                    <li>Object: Collections of related data.</li>
+                </ol>
+        <br>
+        <h2 id="2">Arithmetic Operators</h2>
+            <p>An operator is a character that performs a task in our code. JavaScript has several built-in in arithmetic operators, that allow us to perform mathematical calculations on numbers. These include the following operators and their corresponding symbols:</p>
+                <ul>
+                    <li>Add: +</li>
+                    <li>Subtract: -</li> 
+                    <li>Multiply: *</li>   
+                    <li>Divide: /</li> 
+                    <li>Remainder: %</li>    
+                </ul>
+            <p><strong>String Concatenation:</strong>When a + operator is used on two strings, it appends the right string to the left string. This process of appending one string to another is called concatenation. Notice in the third example we had to make sure to include a space at the end of the first string. The computer will join the strings exactly, so we needed to make sure to include the space we wanted between the two strings.</p>
+            <p><strong>Properties:</strong>When you introduce a new piece of data into a JavaScript program, the browser saves it as an instance of the data type. Every string instance has a property called length that stores the number of characters in that string. You can retrieve property information by appending the string with a period and the property name.</p>
+        <h2 id="3">Methods</h2>
+                <p>Remember that methods are actions we can perform. JavaScript provides a number of string methods. We call, or use, these methods by appending an instance with:</p>
+                    <ul>
+                        <li>a period (the dot operator)</li>
+                        <li>the name of the method</li>
+                        <li>opening and closing parentheses</li>
+                    </ul>
+        <h2 id="4">Built-in Objects</h2>
+            <p>In addition to console, there are other objects built into JavaScript. Down the line, you’ll build your own objects, but for now these “built-in” objects are full of useful functionality. For example, if you wanted to perform more complex mathematical operations than arithmetic, JavaScript has the built-in Math object. The great thing about objects is that they have methods!</p>
+        <h2 id="5">Variables</h2>
+            <h3>"var"</h3>
+                <ul>
+                    <li>var, short for variable, is a JavaScript keyword that creates, or declares, a new variable.</li>
+                    <li>Variable names cannot start with numbers.</li>
+                    <li>Variable names are case sensitive, so myName and myname would be different variables. It is bad practice to create two variables that have the same name using different cases.</li>
+                    <li>Variable names cannot be the same as keywords. </li>
+                </ul>
+            <h3>"let"</h3>
+                <ul>
+                    <li>The let keyword signals that the variable can be reassigned a different value.</li>
+                    <li>If we don’t assign a value to a variable declared using the let keyword, it automatically has a value of undefined.</li>
+                    <li>We can reassign the value of the variable.</li>
+                </ul>
+            <h3>"const"</h3>
+                <ul>
+                    <li>A const variable cannot be reassigned because it is constant. If you try to reassign a const variable, you’ll get a TypeError</li>
+                    <li>Constant variables must be assigned a value when declared. If you try to declare a const variable without a value, you’ll get a SyntaxError.</li>
+                </ul>
+            <h3>String Interpolation</h3>
+                <ul>
+                    <li>a template literal is wrapped by backticks ` (this key is usually located on the top of your keyboard, left of the 1 key).</li>
+                    <li>Inside the template literal, you’ll see a placeholder, ${myPet}. The value of myPet is inserted into the template literal.</li>
+                    <li>When we interpolate `I own a pet ${myPet}.`, the output we print is the string: 'I own a pet armadillo.'</li>
+                </ul>
+            <h3>typeof operator</h3>
+                <p>While writing code, it can be useful to keep track of the data types of the variables in your program. If you need to check the data type of a variable’s value, you can use the typeof operator. The typeof operator checks the value to its right and returns, or passes back, a string of the data type.</p>
+
+    
+
+                
+
+    </main>
+    <span><a href="/Users/yossel/Desktop/coding/Yossel´s coding journey/index.html" class="back">HOME</a></span>
+</body>
+</html>
