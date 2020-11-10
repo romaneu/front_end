@@ -69,7 +69,32 @@
                     <p>You can add opacity to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.</p>
             <br>
             <h2 id="d">Typography</h2>
-                
+                <p>When setting typefaces on a web page, keep the following points in mind:</p>
+                    <ol>
+                        <li>The font specified in a stylesheet must be installed on a user’s computer in order for that font to display when a user visit the web page. We’ll learn how to work around this issue in a later exercise.</li>
+                        <li>It’s a good practice to limit the number of typefaces used on a web page to 2 or 3.</li>
+                        <li>When the name of a typeface consists of more than one word, it must be enclosed in double quotes (otherwise it will not be recognized).</li>
+                    </ol>
+                <p><strong>Fonts:</strong>When using numeric weights, there are a number of default font weights that we can use:</p>
+                    <ol>
+                        <li>400 is the default font-weight of most text.</li>
+                        <li>700 signifies a bold font-weight.</li>
+                        <li>300 signifies a light font-weight.</li>
+                    </ol>
+                <p><strong>Word spacing:</strong> You can also increase the spacing between words in a body of text, technically known as word spacing. To do so, you can use the word-spacing property.</p>
+                <p><strong>Letter Spacing:</strong>The technical term for adjusting the spacing between letters is called tracking. Tracking can be adjusted with the letter-spacing property in CSS.</p>
+                <p><strong>Text Transformation:</strong>Text can also be styled to appear in either all uppercase or lowercase with the text-transform property.</p>
+                <p><strong>Text Alignment:</strong>No matter how much styling is applied to text (typeface, size, weight, etc.), text always appears on the left side of the browser. To move, or align, text, we can use the text-align property.</p>
+                <p><strong>Fallback Fonts:</strong>Most computers have a small set of typefaces pre-installed. This small set includes serif fonts like Times New Roman and sans-serif fonts like Arial. These pre-installed fonts serve as fallback fonts if the stylesheet specifies a font which is not installed on a user’s computer.</p>
+                <p><strong>Linking fonts</strong>With the number of fonts available with modern typography, it is unrealistic to expect users to have all fonts installed on their computers. New fonts are often centralized in directories made available for public use. We refer to these fonts as non-user fonts. When we have the link to the font and the styles of our choice, we can add the font to the "head" section of the HTML document, using the "link" tag and the href property.</p>
+                <p> CSS offers a way to import fonts directly into stylesheets with the @font-face property. To load fonts with the @font-face property:
+                    <ol>
+                        <li>Instead of using the font’s link in the HTML document, enter the link into the URL bar in the browser.</li>
+                        <li>The browser will load the CSS rules. You will need to focus on the rules that are directly labeled as /* latin */. Some of the latin rules are on separate lines. You will need each of these.</li>
+                        <li>Copy each of the CSS rules labeled latin, and paste the rules from the browser to the top of style.css.</li>
+                    </ol>
+                    It is important to stress the need to copy the @font-face rules to the top of the stylesheet for the font to load correctly in the project.
+                </p>
         </article>
         <footer>
             <span><a href="/Users/yossel/Desktop/coding/Yossel´s coding journey/index.html" class="back">HOME</a></span>
