@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
-    <link rel="stylesheet" href="/Users/yossel/Desktop/coding/Yossel´s coding journey/resouces /css/styles.css">
+    <link rel="stylesheet" href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /css/styles.css">
 </head>   
 </html>
     <body>
@@ -113,8 +113,8 @@
                         <li>color — The color of the border. Web browsers can render colors using a few different formats, including <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">140 built-in color keywords.</a></li>
                     </ol>
                 <p>The default border is medium none color, where color is the current color of the element. If width, style, or color are not set in the CSS file, the web browser assigns the default value for that property.</p>
-                <p><strong>Border Radius:</strong>You can modify the corners of an element’s border box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height and then setting the radius equal to the distance between the center of the circle and the width of the box, which is 50%.</p>
-                <p><strong>Padding:</strong>The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it. In CSS, you can modify this space with the padding property.</p>
+                <p><strong>Border Radius: </strong>You can modify the corners of an element’s border box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height and then setting the radius equal to the distance between the center of the circle and the width of the box, which is 50%.</p>
+                <p><strong>Padding: </strong>The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it. In CSS, you can modify this space with the padding property.</p>
                 <p>If you want to be more specific about the amount of padding on each side of a box’s content, you can use the following properties:</p>
                     <ol>
                         <li>padding-top</li>
@@ -124,8 +124,38 @@
                     </ol>
                 <p>Another implementation of the padding property lets you specify exactly how much padding there should be on each side of the content in a single declaration. Example: "padding:6px 11px 4px 9px;" In the example, the four values 6px 11px 4px 9px correspond to the amount of padding in a clockwise rotation. In order, it specifies the amount of padding on the top (6 pixels), right (11 pixels), bottom (4 pixels), and left (9 pixels) sides of the content.</p>
                 <p>However, if the top and bottom values for padding will equal each other, and the left and right values for padding will also equal each other, you can use the following shortcut: "padding: 5px 10px;" The first value, 5px, sets the padding value for the top and bottom sides of the content. The second value, 10px, sets the padding value for the left and right sides of the content.</p>
-                <p><strong>Margings:</strong></p>
-
+                <p><strong>Margings: </strong>Margin refers to the space directly outside of the box. The margin property is used to specify the size of this space.</p>
+                <p>Just as with Padding, if you want to be even more specific about the amount of margin on each side of a box, you can use the following properties:</p>
+                    <ol>
+                        <li>margin-top</li>
+                        <li>margin-right</li>
+                        <li>margin-bottom</li>
+                        <li>margin-left</li>
+                    </ol>
+                <p>Just like with padding, margin can also be put in a single declaration. See above.</p>
+                <p>The margin property also lets you center content. However, you must follow a few syntax requirements. Take a look at the following example: margin: 0 auto;. In the example above, margin: 0 auto; will center the divs in their containing elements. The 0 sets the top and bottom margins to 0 pixels. The auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element. The div elements in the example above should center within an element that fills the page, but this doesn’t occur. Why? In order to center an element, a width must be set for that element. Otherwise, the width of the div will be automatically set to the full width of its containing element, like the "body", for example. It’s not possible to center an element that takes up the full width of the page.</p>
+                <p><strong>Margin Collapse: </strong>Horizontal margins (left and right), like padding, are always displayed and added together. Unlike horizontal margins, vertical margins do not add. Instead, the larger of the two vertical margins sets the distance between adjacent elements.</p>
+                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/MarginCollapse.svg" width="600" height="600">
+                <p><strong>Minimum and Maximum Height and Width: </strong>Because a web page can be viewed through displays of differing screen size, the content on the web page can suffer from those changes in size. To avoid this problem, CSS offers two properties that can limit how narrow, wide, long or short an element’s box can be sized to:</p>
+                    <ol>
+                        <li>min-width — this property ensures a minimum width of an element’s box.</li>
+                        <li>max-width — this property ensures a maximum width of an element’s box.</li>
+                        <li>min-height — this property ensures a minimum height for an element’s box.</li>
+                        <li>max-height — this property ensures a maximum height of an element’s box.</li>
+                    </ol>
+                <p><strong>Overflow: </strong>The overflow property controls what happens to content that spills, or overflows, outside its box. It can be set to one of the following values:</p>
+                    <ol>
+                        <li>hidden - when set to this value, any content that overflows will be hidden from view.</li>
+                        <li>scroll - when set to this value, a scrollbar will be added to the element’s box so that the rest of the content can be viewed by scrolling.</li>
+                        <li>visible - when set to this value, the overflow content will be displayed outside of the containing element. Note, this is the default value.</li>
+                    </ol>
+                <p><strong>Resetting Defaults: </strong>All major web browsers have a default stylesheet they use in the absence of an external stylesheet. These default stylesheets are known as user agent stylesheets. In this case, the term “user agent“ is a technical term for the browser. Many developers choose to reset these default values so that they can truly work with a clean slate: take "*" as a selector and put margin and padding equeal to 0. It is often the first CSS rule in an external stylesheet.</p>
+                <p><strong>Visibility: </strong>Elements can be hidden from view with the visibility property. The visibility property can be set to one of the following values:</p>
+                    <ol>
+                        <li>hidden — hides an element.</li>
+                        <li>visible — displays an element.</li>
+                    </ol>
+                <p>Note: What’s the difference between display: none and visibility: hidden? An element with display: none will be completely removed from the web page. An element with visibility: hidden, however, will not be visible on the web page, but the space reserved for it will.</p>
         </article>
         <footer>
             <span><a href="/Users/yossel/Desktop/coding/Yossel´s coding journey/index.html" class="back">HOME</a></span>
