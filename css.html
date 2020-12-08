@@ -5,125 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
     <link rel="stylesheet" href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
 </head>   
 </html>
     <body>
-        <span><a href="/Users/yossel/Desktop/coding/Yossel´s coding journey/index.html" class="back">HOME</a></span>
+<!--Header -->
         <header>
-            <h2>CSS</h2>
+            <div class="navbar">
+                <a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/index.html" class="logo">Roman Remis</a>
+                <nav>
+                    <ul>
+                        <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/html.html">HTML</a> </li>
+                        <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/css.html">CSS</a></li>
+                        <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/javascirpt.html">JavaScript</a></li>
+                    </ul>
+                </nav> 
+            </div>
         </header>
-        <br>
-        <nav>
+<!--Overview-->
+        <div class="main">
             <ol>
-                <li><a href="#basics">CSS Basics</a></li>
-                <li><a href="#b">CSS Visual Rules</a></li>
-                <li><a href="#c">CSS colors</a></li>
+                <li><a href="#basics">Basics</a></li>
+                <li><a href="#b">Visual Rules</a></li>
+                <li><a href="#c">Colors</a></li>
                 <li><a href="#d">Typography</a></li>
                 <li><a href="#e">Box Model</a></li>
                 <li><a href="#f">Box Model: Content-Box</a></li>
-                <li><a href="#g">CSS display and positioning</a></li>
-
+                <li><a href="#g">Display and positioning</a></li>
+                <li><a href="#h">Color Theory</a></li>
             </ol>
-        </nav>
-        <article>
-            <h2 id="basics">CSS Basics</h2>
-                <ul>
-                    <li>CSS can change the look of HTML elements. In order to do this, CSS must select HTML elements, then apply styles to them.</li>
-                    <li>CSS can select HTML elements by tag, class, or ID.</li>
-                    <li>Multiple CSS classes can be applied to one HTML element.</li>
-                    <li>Classes can be reusable, while IDs can only be used once.</li>
-                    <li>IDs are more specific than classes, and classes are more specific than tags. That means IDs will override any styles from a class, and classes will override any styles from a tag selector.</li>
-                    <li>Multiple selectors can be chained together to select an element. This raises the specificity, but can be necessary.</li>
-                    <li>Nested elements can be selected by separating selectors with a space.</li>
-                    <li>Nested elements can be selected by separating selectors with a space.</li>
-                </ul>
-            <h2 id="b">CSS Visual Rules</h2>
-                <ul>
-                    <li>CSS declarations are structured into property and value pairs.</li>
-                    <li>The font-family property defines the typeface of an element.</li>
-                    <li>font-size controls the size of text displayed.</li>
-                    <li>font-weight defines how thin or thick text is displayed.</li>
-                    <li>The text-align property places text in the left, right, or center of its parent container.</li>
-                    <li>Text can have two different color attributes: color and background-color. color defines the color of the text, while background-color defines the color behind the text.</li>
-                    <li>CSS can make an element transparent with the opacity property.</li>
-                    <li>CSS can also set the background of an element to an image with the background-image property.</li>
-                    <li>The !important flag will override any style, however it should almost never be used, as it is extremely difficult to override.</li>
-                </ul>
-            <h2 id="c">CSS color </h2>
-                <p>There are four ways to represent color in CSS:</p>
-                <ol>    
-                    <li>Named colors — there are 147 named colors</li>
-                    <li>Hexadecimal or hex colors</li>
-                        <ul>
-                            <li>Hexadecimal is a number system with has sixteen digits, 0 to 9 followed by “A” to “F”.</li>
-                            <li>Hex values always begin with # and specify values of red, blue and green using hexademical numbers such as #23F41A.</li>
-                        </ul>
-                    <li>RGB</li>
-                        <ul>
-                            <li>RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green.</li>
-                            <li>RGB values range from 0 to 255 and look like this: rgb(7, 210, 50).</li>
-                        </ul>
-                    <li>HSL</li>
-                        <ul>
-                            <li>HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is).</li>
-                            <li>Hue ranges from 0 to 360 and saturation and lightness are both represented as percentages like this: hsl(200, 20%, 50%).</li>
-                        </ul>
-                </ol>
-                    <p>You can add opacity to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.</p>
-            <br>
-            <h2 id="d">Typography</h2>
-                <p>When setting typefaces on a web page, keep the following points in mind:</p>
-                    <ol>
-                        <li>The font specified in a stylesheet must be installed on a user’s computer in order for that font to display when a user visit the web page. We’ll learn how to work around this issue in a later exercise.</li>
-                        <li>It’s a good practice to limit the number of typefaces used on a web page to 2 or 3.</li>
-                        <li>When the name of a typeface consists of more than one word, it must be enclosed in double quotes (otherwise it will not be recognized).</li>
-                    </ol>
-                <p><strong>Fonts:</strong>When using numeric weights, there are a number of default font weights that we can use:</p>
-                    <ol>
-                        <li>400 is the default font-weight of most text.</li>
-                        <li>700 signifies a bold font-weight.</li>
-                        <li>300 signifies a light font-weight.</li>
-                    </ol>
-                <p><strong>Word spacing:</strong> You can also increase the spacing between words in a body of text, technically known as word spacing. To do so, you can use the word-spacing property.</p>
-                <p><strong>Letter Spacing:</strong>The technical term for adjusting the spacing between letters is called tracking. Tracking can be adjusted with the letter-spacing property in CSS.</p>
-                <p><strong>Text Transformation:</strong>Text can also be styled to appear in either all uppercase or lowercase with the text-transform property.</p>
-                <p><strong>Text Alignment:</strong>No matter how much styling is applied to text (typeface, size, weight, etc.), text always appears on the left side of the browser. To move, or align, text, we can use the text-align property.</p>
-                <p><strong>Fallback Fonts:</strong>Most computers have a small set of typefaces pre-installed. This small set includes serif fonts like Times New Roman and sans-serif fonts like Arial. These pre-installed fonts serve as fallback fonts if the stylesheet specifies a font which is not installed on a user’s computer.</p>
-                <p><strong>Linking fonts</strong>With the number of fonts available with modern typography, it is unrealistic to expect users to have all fonts installed on their computers. New fonts are often centralized in directories made available for public use. We refer to these fonts as non-user fonts. When we have the link to the font and the styles of our choice, we can add the font to the "head" section of the HTML document, using the "link" tag and the href property.</p>
-                <p> CSS offers a way to import fonts directly into stylesheets with the @font-face property. To load fonts with the @font-face property:
-                    <ol>
-                        <li>Instead of using the font’s link in the HTML document, enter the link into the URL bar in the browser.</li>
-                        <li>The browser will load the CSS rules. You will need to focus on the rules that are directly labeled as /* latin */. Some of the latin rules are on separate lines. You will need each of these.</li>
-                        <li>Copy each of the CSS rules labeled latin, and paste the rules from the browser to the top of style.css.</li>
-                    </ol>
-                    It is important to stress the need to copy the @font-face rules to the top of the stylesheet for the font to load correctly in the project.
-                </p>
-            <h2 id="e">Box Model</h2>
-                <P>All elements on a web page are interpreted by the browser as “living” inside of a box. This is what is meant by the box model. The box model comprises the set of properties which define parts of an element that take up space on a web page. The model includes the content area’s size (width and height) and the element’s padding, border, and margin. The properties include:</P>
-                    <ol>
-                        <li>Width and height — specifies the width and height of the content area.</li>
-                        <li>Padding — specifies the amount of space between the content area and the border.</li>
-                        <li>Border — specifies the thickness and style of the border surrounding the content area and padding.</li>
-                        <li>Margin — specifies the amount of space between the border and the outside edge of the element.</li>
-                    </ol>
-                    <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/BoxModel.png" style="width: 400px; height: 400px;" alt="BoxModel">
-                <p><strong>Height and Width:</strong>An element’s content has two dimensions: a height and a width. By default, the dimensions of an HTML box are set to hold the raw contents of the box.</p>
-                <p><strong>Borders:</strong>A border is a line that surrounds an element, like a frame around a painting. Borders can be set with a specific width, style, and color.</p>
-                    <ol>
-                        <li>width — The thickness of the border. A border’s thickness can be set in pixels or with one of the following keywords: thin, medium, or thick.</li>
-                        <li>style — The design of the border. Web browsers can render any of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values">10 different styles</a>. Some of these styles include: none, dotted, and solid.</li>
-                        <li>color — The color of the border. Web browsers can render colors using a few different formats, including <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">140 built-in color keywords.</a></li>
-                    </ol>
-                <p>The default border is medium none color, where color is the current color of the element. If width, style, or color are not set in the CSS file, the web browser assigns the default value for that property.</p>
-                <p><strong>Border Radius: </strong>You can modify the corners of an element’s border box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height and then setting the radius equal to the distance between the center of the circle and the width of the box, which is 50%.</p>
-                <p><strong>Padding: </strong>The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it. In CSS, you can modify this space with the padding property.</p>
-                <p>If you want to be more specific about the amount of padding on each side of a box’s content, you can use the following properties:</p>
-                    <ol>
-                        <li>padding-top</li>
-                        <li>padding-right</li>
-                        <li>padding-bottom</li>
-                        <li>padding-left</li>
-                    </ol>
+        <div class="basics" id="basics">
+<!--Basics-->
+            <h2>1. Basics</h2>
+            <ul>
+                <li>CSS can change the look of HTML elements. In order to do this, CSS must select HTML elements, then apply styles to them.</li>
+                <li>CSS can select HTML elements by tag, class, or ID.</li>
+                <li>Multiple CSS classes can be applied to one HTML element.</li>
+                <li>Classes can be reusable, while IDs can only be used once.</li>
+                <li>IDs are more specific than classes, and classes are more specific than tags. That means IDs will override any styles from a class, and classes will override any styles from a tag selector.</li>
+                <li>Multiple selectors can be chained together to select an element. This raises the specificity, but can be necessary.</li>
+                <li>Nested elements can be selected by separating selectors with a space.</li>
+                <li>Nested elements can be selected by separating selectors with a space.</li>
+            </ul>
+        </div>
+        <div class="visual" id="b">
+<!--Visual Rules-->
+            <h2>2. Visual Rules</h2>
+            <ul>
+                <li>CSS declarations are structured into property and value pairs.</li>
+                <li>The font-family property defines the typeface of an element.</li>
+                <li>font-size controls the size of text displayed.</li>
+                <li>font-weight defines how thin or thick text is displayed.</li>
+                <li>The text-align property places text in the left, right, or center of its parent container.</li>
+                <li>Text can have two different color attributes: color and background-color. color defines the color of the text, while background-color defines the color behind the text.</li>
+                <li>CSS can make an element transparent with the opacity property.</li>
+                <li>CSS can also set the background of an element to an image with the background-image property.</li>
+                <li>The !important flag will override any style, however it should almost never be used, as it is extremely difficult to override.</li>
+            </ul>
+        </div>
+<!--Color-->
+        <div class="color" id="c">
+            <h2>3. Color </h2>
+                <h3>3.1. Basics</h3>
+                <p>There are 4 ways to represent color in CSS:</p>   
+                    <h4>1. Named colors</h4> 
+                    <ul>
+                        <li>There are 147 named colors</li>
+                    </ul>
+                    <h4>2. Hexadecimal or hex colors</h4>
+                    <ul>
+                        <li>Hexadecimal is a number system with has sixteen digits, 0 to 9 followed by “A” to “F”.</li>
+                        <li>Hex values always begin with # and specify values of red, blue and green using hexademical numbers such as #23F41A.</li>
+                    </ul>
+                    <h4>3. RGB</h4>
+                    <ul>
+                        <li>RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green.</li>
+                        <li>RGB values range from 0 to 255 and look like this: rgb(7, 210, 50).</li>
+                    </ul>
+                    <h4>4. HSL</h4>
+                    <ul>
+                        <li>HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is).</li>
+                        <li>Hue ranges from 0 to 360 and saturation and lightness are both represented as percentages like this: hsl(200, 20%, 50%).</li>
+                    </ul>
+                <p>You can add opacity to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.</p>
+                <h3>Color theory</h3>
+                    <h4>3.2. Color Schemes</h4>
+                    <p>Color schemes (or color palettes) are the result of pairing two or more colors together. The colors you select can make or break your design, however, knowing your options will put you in a better place to determine what is best for moving forward. When deciding which colors to use in your design, there are 4 different color schemes to consider:</p>
+                        <ol>
+                            <strong><li>Monochromatic</li></strong>
+                            <strong><li>Complementary</li></strong>
+                            <strong><li>Analogous</li></strong>
+                            <strong><li>Triadic</li></strong>
+                        </ol>
+                    <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/color-schemes.png" width="650" height="600" alt="BorderBox">
+                        <h4>1. Monochromatic</h4>
+                            <p>The most basic color scheme possible utilizes a single color with varying shades and tints to create a monochromatic palette.</p>
+                            <p>These monochromatic color schemes are beneficial in that they provide an organized impression when applied to your designs. The use of a single color can provide an immediate sense of harmony.</p>
+                        <h4>2. Complementary</h4>
+                            <p>As depicted in the diagram before, a complementary color scheme utilizes colors opposite from each other on the color wheel. For instance, if you were to select blue as your main color, it would create maximum contrast and intensity with orange. Complementary color schemes are popular on the web as they have high contrast in the color pairing. </p>
+                            <p>They can seem clashing if complementary colors are used for large areas that are directly next to each other. However, when used strategically, they can draw attention to certain elements on the page that you want users to focus on.</p>
+                        <h4>3. Analogous</h4>
+                            <p>Analogous color schemes apply three or more colors that are adjacent to each other on the color wheel. Typically, there is one dominant color (or hue), combined with a second to support, and a third to accent the color palette.</p>
+                            <p>Analogous color schemes create a visually pleasing and calming display. For instance, the color blue can pair nicely with both teal and green. However, analogous color schemes provide a low-contrast experience, since all colors fall in line with one another. They shouldn’t be used for content that needs the user’s direct attention, but they can be used to create backgrounds that do not compete with the main content of the site.</p>
+                        <h4>4. Triadic</h4>
+                            <p>Triadic color schemes, much like complementary schemes, provide additional pops of color while allowing for some flexibility in the range you can use. These consist of three colors that are equidistant from each other on the color wheel. Triadic color schemes are useful in that they create a sense of equality, vibrancy, and security in your designs.</p>
+                <h3>3.3. Color Psychology</h3>
+                <p>Each color has a specific meaning (both positive and negative), which can evoke emotions from a user. For instance, here’s a list of words often associated with colors:</p>
+                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/Color Psychology.png" width="700" height="600" alt="BorderBox">
+<!--Typography--> 
+        </div>
+        <div class="typography" id="d">
+            <h2>4. Typography</h2>
+            <p>When setting typefaces on a web page, keep the following points in mind:</p>
+            <ol>
+                <li>The font specified in a stylesheet must be installed on a user’s computer in order for that font to display when a user visit the web page. We’ll learn how to work around this issue in a later exercise.</li>
+                <li>It’s a good practice to limit the number of typefaces used on a web page to 2 or 3.</li>
+                <li>When the name of a typeface consists of more than one word, it must be enclosed in double quotes (otherwise it will not be recognized).</li>
+            </ol>
+            <p><strong>Fonts:</strong>When using numeric weights, there are a number of default font weights that we can use:</p>
+            <ol>
+                <li>400 is the default font-weight of most text.</li>
+                <li>700 signifies a bold font-weight.</li>
+                <li>300 signifies a light font-weight.</li>
+            </ol>
+            <p><strong>Word spacing:</strong> You can also increase the spacing between words in a body of text, technically known as word spacing. To do so, you can use the word-spacing property.</p>
+            <p><strong>Letter Spacing:</strong>The technical term for adjusting the spacing between letters is called tracking. Tracking can be adjusted with the letter-spacing property in CSS.</p>
+            <p><strong>Text Transformation:</strong>Text can also be styled to appear in either all uppercase or lowercase with the text-transform property.</p>
+            <p><strong>Text Alignment:</strong>No matter how much styling is applied to text (typeface, size, weight, etc.), text always appears on the left side of the browser. To move, or align, text, we can use the text-align property.</p>
+            <p><strong>Fallback Fonts:</strong>Most computers have a small set of typefaces pre-installed. This small set includes serif fonts like Times New Roman and sans-serif fonts like Arial. These pre-installed fonts serve as fallback fonts if the stylesheet specifies a font which is not installed on a user’s computer.</p>
+            <p><strong>Linking fonts</strong>With the number of fonts available with modern typography, it is unrealistic to expect users to have all fonts installed on their computers. New fonts are often centralized in directories made available for public use. We refer to these fonts as non-user fonts. When we have the link to the font and the styles of our choice, we can add the font to the "head" section of the HTML document, using the "link" tag and the href property.</p>
+            <p> CSS offers a way to import fonts directly into stylesheets with the @font-face property. To load fonts with the @font-face property:
+             <ol>
+                <li>Instead of using the font’s link in the HTML document, enter the link into the URL bar in the browser.</li>
+                <li>The browser will load the CSS rules. You will need to focus on the rules that are directly labeled as /* latin */. Some of the latin rules are on separate lines. You will need each of these.</li>
+                <li>Copy each of the CSS rules labeled latin, and paste the rules from the browser to the top of style.css.</li>
+            </ol>
+            <p>It is important to stress the need to copy the @font-face rules to the top of the stylesheet for the font to load correctly in the project.</p>
+        </div>
+        <div class="box model" id="e">
+            <h2>Box Model</h2>
+            <P>All elements on a web page are interpreted by the browser as “living” inside of a box. This is what is meant by the box model. The box model comprises the set of properties which define parts of an element that take up space on a web page. The model includes the content area’s size (width and height) and the element’s padding, border, and margin. The properties include:</P>
+            <ol>
+                <li>Width and height — specifies the width and height of the content area.</li>
+                <li>Padding — specifies the amount of space between the content area and the border.</li>
+                <li>Border — specifies the thickness and style of the border surrounding the content area and padding.</li>
+                <li>Margin — specifies the amount of space between the border and the outside edge of the element.</li>
+            </ol>
+            <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/BoxModel.png" style="width: 400px; height: 400px;" alt="BoxModel">
+            <p><strong>Height and Width:</strong>An element’s content has two dimensions: a height and a width. By default, the dimensions of an HTML box are set to hold the raw contents of the box.</p>
+            <p><strong>Borders:</strong>A border is a line that surrounds an element, like a frame around a painting. Borders can be set with a specific width, style, and color.</p>
+            <ol>
+                <li>width — The thickness of the border. A border’s thickness can be set in pixels or with one of the following keywords: thin, medium, or thick.</li>
+                <li>style — The design of the border. Web browsers can render any of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values">10 different styles</a>. Some of these styles include: none, dotted, and solid.</li>
+                <li>color — The color of the border. Web browsers can render colors using a few different formats, including <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">140 built-in color keywords.</a></li>
+            </ol>
+            <p>The default border is medium none color, where color is the current color of the element. If width, style, or color are not set in the CSS file, the web browser assigns the default value for that property.</p>
+            <p><strong>Border Radius: </strong>You can modify the corners of an element’s border box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height and then setting the radius equal to the distance between the center of the circle and the width of the box, which is 50%.</p>
+            <p><strong>Padding: </strong>The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it. In CSS, you can modify this space with the padding property.</p>
+            <p>If you want to be more specific about the amount of padding on each side of a box’s content, you can use the following properties:</p>
+            <ol>
+                <li>padding-top</li>
+                <li>padding-right</li>
+                <li>padding-bottom</li>
+                <li>padding-left</li>
+            </ol>
                 <p>Another implementation of the padding property lets you specify exactly how much padding there should be on each side of the content in a single declaration. Example: "padding:6px 11px 4px 9px;" In the example, the four values 6px 11px 4px 9px correspond to the amount of padding in a clockwise rotation. In order, it specifies the amount of padding on the top (6 pixels), right (11 pixels), bottom (4 pixels), and left (9 pixels) sides of the content.</p>
                 <p>However, if the top and bottom values for padding will equal each other, and the left and right values for padding will also equal each other, you can use the following shortcut: "padding: 5px 10px;" The first value, 5px, sets the padding value for the top and bottom sides of the content. The second value, 10px, sets the padding value for the left and right sides of the content.</p>
                 <p><strong>Margings: </strong>Margin refers to the space directly outside of the box. The margin property is used to specify the size of this space.</p>
@@ -158,12 +204,16 @@
                         <li>visible — displays an element.</li>
                     </ol>
                 <p>Note: What’s the difference between display: none and visibility: hidden? An element with display: none will be completely removed from the web page. An element with visibility: hidden, however, will not be visible on the web page, but the space reserved for it will.</p>
-            <h2 id="f">Box Model: Content-Box</h2>
+        </div>
+        <div class="content box" id="f">
+            <h2>Box Model: Content-Box</h2>
                 <p>In CSS, the box-sizing property controls the type of box model the browser should use when interpreting a web page. The default value of this property is content-box. This is the same box model that is affected by border thickness and padding.</p>
                 <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/ContentBox.svg" width="600" height="600" alt="ContentBox">
                 <p>Fortunately, we can reset the entire box model and specify a new one: border-box. For this we take "*" as an selector and set the following declaration: box-sizing: border-box</p>
                 <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/BorderBox.svg" width="600" height="600" alt="BorderBox">
-            <h2 id="g">CSS display and positioning</h2>
+        </div>
+        <div class="display" id="g">
+            <h2>CSS display and positioning</h2>
                 <p>In addition to the properties that it provides to style HTML elements, CSS includes properties that change how a browser positions elements. These properties specify where an element is located on a page, if the element can share lines with other elements, and other related attributes.</p>
                 <p><strong>Position: </strong>The default position of an element can be changed by setting its position property. The position property can take one of four values:</p>
                     <ol>
@@ -193,23 +243,19 @@
                         <li>Inline-block</li>
                             <p>Inline-block display combines features of both inline and block elements. Inline-block elements can appear next to each other and we can specify their dimensions using the width and height properties. Images are the best example of default inline-block elements.</p>
                     </ol>
-                    <p>The default display for some tags, such as <em>, <strong>, and <a>, is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content and not requiring a new line after each element. The height and width of these elements cannot be specified in the CSS document. For example, the text of an anchor tag (<a>) will, by default, be displayed on the same line as the surrounding text, and it will only be as wide as necessary to contain its content. inline elements cannot be altered in size with the height or width CSS properties.</p>
+                    <p>The default display for some tags, such as "em", "strong", and "a", is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content and not requiring a new line after each element. The height and width of these elements cannot be specified in the CSS document. For example, the text of an anchor tag (<a>) will, by default, be displayed on the same line as the surrounding text, and it will only be as wide as necessary to contain its content. inline elements cannot be altered in size with the height or width CSS properties.</p>
                 <p><strong>Float: </strong>If you’re simply interested in moving an element as far left or as far right as possible on the page, you can use the float property. The float property can be set to one of two values:</p>
                     <ol>
                         <li>left - this value will move, or float, elements as far left as possible.</li>
                         <li>right - this value will move elements as far right as possible.</li>
                     </ol>
-                <P><strong>Clear: </strong>The clear property specifies how elements should behave when they bump into each other on the page. It can take on one of the following values:</P>
+                <p><strong>Clear: </strong>The clear property specifies how elements should behave when they bump into each other on the page. It can take on one of the following values:</P>
                     <ol>
                         <li>left — the left side of the element will not touch any other element within the same containing element.</li>
                         <li>left — the left side of the element will not touch any other element within the same containing element.</li>
                         <li>both — neither side of the element will touch any other element within the same containing element.</li>
                         <li>none — the element can touch either side.</li>
                     </ol>
-
-        </article>
-        <footer>
-            <span><a href="/Users/yossel/Desktop/coding/Yossel´s coding journey/index.html" class="back">HOME</a></span>
-        </footer>
-    </body>
-</html>
+        </div>
+    </div>
+<!--Footer-->
