@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
     <link rel="stylesheet" href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>   
 </html>
     <body>
 <!--Header -->
-        <header>
-            <div class="navbar">
-                <a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/index.html" class="logo">Roman Remis</a>
-                <nav>
-                    <ul>
-                        <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/html.html">HTML</a> </li>
-                        <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/css.html">CSS</a></li>
-                        <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/javascirpt.html">JavaScript</a></li>
-                    </ul>
-                </nav> 
-            </div>
-        </header>
+<header style="top: 0px">
+    <a class="logo" href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/index.html"><img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/Logo_Roman Remis.png" alt="Logo" width="300px" height="150px"></a>
+        <nav>
+        <ul class="nav_links">
+                <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/html.html">HTML</a> </li>
+                <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/css.html">CSS</a></li>
+                <li><a href="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/javascirpt.html">JavaScript</a></li>
+        </ul>
+    </nav> 
+</header>
 <!--Overview-->
         <div class="main">
             <ol>
@@ -31,12 +29,15 @@
                 <li><a href="#c">Colors</a></li>
                 <li><a href="#d">Typography</a></li>
                 <li><a href="#e">Box Model</a></li>
-                <li><a href="#f">Box Model: Content-Box</a></li>
-                <li><a href="#g">Display and positioning</a></li>
-                <li><a href="#h">Color Theory</a></li>
+                <li><a href="#f">Positioning</a></li>
+                <li><a href="#g">Display</a></li>
+                <li><a href="#h">Links and buttons</a></li>
+                <li><a href="#i">Secondary navigation</a></li>
+
             </ol>
-        <div class="basics" id="basics">
-<!--Basics-->
+        </div>
+<!--Basics-->        
+        <div id="basics">
             <h2>1. Basics</h2>
             <ul>
                 <li>CSS can change the look of HTML elements. In order to do this, CSS must select HTML elements, then apply styles to them.</li>
@@ -67,195 +68,260 @@
 <!--Color-->
         <div class="color" id="c">
             <h2>3. Color </h2>
-                <h3>3.1. Basics</h3>
-                <p>There are 4 ways to represent color in CSS:</p>   
-                    <h4>1. Named colors</h4> 
-                    <ul>
-                        <li>There are 147 named colors</li>
-                    </ul>
-                    <h4>2. Hexadecimal or hex colors</h4>
-                    <ul>
-                        <li>Hexadecimal is a number system with has sixteen digits, 0 to 9 followed by “A” to “F”.</li>
-                        <li>Hex values always begin with # and specify values of red, blue and green using hexademical numbers such as #23F41A.</li>
-                    </ul>
-                    <h4>3. RGB</h4>
-                    <ul>
-                        <li>RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green.</li>
-                        <li>RGB values range from 0 to 255 and look like this: rgb(7, 210, 50).</li>
-                    </ul>
-                    <h4>4. HSL</h4>
-                    <ul>
-                        <li>HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is).</li>
-                        <li>Hue ranges from 0 to 360 and saturation and lightness are both represented as percentages like this: hsl(200, 20%, 50%).</li>
-                    </ul>
-                <p>You can add opacity to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.</p>
+                <p>There are 4 ways to represent color in CSS:</p>
+                <ol>
+                    <strong><li>Named colors</li></strong>
+                    <p>There are 147 named colors</p>
+                    <strong><li>Hexadecimal or hex colors</li></strong>
+                    <p>Hexadecimal is a number system with has sixteen digits, 0 to 9 followed by “A” to “F”. Hex values always begin with # and specify values of red, blue and green using hexademical numbers such as #23F41A.</p>
+                    <strong><li>RGB</li></strong>
+                    <p>RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green. RGB values range from 0 to 255 and look like this: rgb(7, 210, 50).</p>
+                    <strong><li>HSL</li></strong>
+                    <p>HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is). Hue ranges from 0 to 360 and saturation and lightness are both represented as percentages like this: hsl(200, 20%, 50%).</p>
+                </ol>
+                <p>You can add <b>opacity</b> to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.</p>
                 <h3>Color theory</h3>
-                    <h4>3.2. Color Schemes</h4>
-                    <p>Color schemes (or color palettes) are the result of pairing two or more colors together. The colors you select can make or break your design, however, knowing your options will put you in a better place to determine what is best for moving forward. When deciding which colors to use in your design, there are 4 different color schemes to consider:</p>
-                        <ol>
-                            <strong><li>Monochromatic</li></strong>
-                            <strong><li>Complementary</li></strong>
-                            <strong><li>Analogous</li></strong>
-                            <strong><li>Triadic</li></strong>
-                        </ol>
-                    <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/color-schemes.png" width="650" height="600" alt="BorderBox">
-                        <h4>1. Monochromatic</h4>
-                            <p>The most basic color scheme possible utilizes a single color with varying shades and tints to create a monochromatic palette.</p>
-                            <p>These monochromatic color schemes are beneficial in that they provide an organized impression when applied to your designs. The use of a single color can provide an immediate sense of harmony.</p>
-                        <h4>2. Complementary</h4>
-                            <p>As depicted in the diagram before, a complementary color scheme utilizes colors opposite from each other on the color wheel. For instance, if you were to select blue as your main color, it would create maximum contrast and intensity with orange. Complementary color schemes are popular on the web as they have high contrast in the color pairing. </p>
-                            <p>They can seem clashing if complementary colors are used for large areas that are directly next to each other. However, when used strategically, they can draw attention to certain elements on the page that you want users to focus on.</p>
-                        <h4>3. Analogous</h4>
-                            <p>Analogous color schemes apply three or more colors that are adjacent to each other on the color wheel. Typically, there is one dominant color (or hue), combined with a second to support, and a third to accent the color palette.</p>
-                            <p>Analogous color schemes create a visually pleasing and calming display. For instance, the color blue can pair nicely with both teal and green. However, analogous color schemes provide a low-contrast experience, since all colors fall in line with one another. They shouldn’t be used for content that needs the user’s direct attention, but they can be used to create backgrounds that do not compete with the main content of the site.</p>
-                        <h4>4. Triadic</h4>
-                            <p>Triadic color schemes, much like complementary schemes, provide additional pops of color while allowing for some flexibility in the range you can use. These consist of three colors that are equidistant from each other on the color wheel. Triadic color schemes are useful in that they create a sense of equality, vibrancy, and security in your designs.</p>
-                <h3>3.3. Color Psychology</h3>
+                <p>Color schemes (or color palettes) are the result of pairing two or more colors together. The colors you select can make or break your design, however, knowing your options will put you in a better place to determine what is best for moving forward. When deciding which colors to use in your design, there are 4 different color schemes to consider:</p>
+                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/color-schemes.png" width="650" height="600" alt="BorderBox">
+                <ol>
+                    <strong><li>Monochromatic</li></strong>
+                    <p>The most basic color scheme possible utilizes a single color with varying shades and tints to create a monochromatic palette. These monochromatic color schemes are beneficial in that they provide an organized impression when applied to your designs. The use of a single color can provide an immediate sense of harmony.</p>
+                    <strong><li>Complementary</li></strong>
+                    <p>As depicted in the diagram before, a complementary color scheme utilizes colors opposite from each other on the color wheel. For instance, if you were to select blue as your main color, it would create maximum contrast and intensity with orange. Complementary color schemes are popular on the web as they have high contrast in the color pairing.</p>
+                    <p>They can seem clashing if complementary colors are used for large areas that are directly next to each other. However, when used strategically, they can draw attention to certain elements on the page that you want users to focus on.</p>
+                    <strong><li>Analogous</li></strong>
+                    <p>Analogous color schemes apply three or more colors that are adjacent to each other on the color wheel. Typically, there is one dominant color (or hue), combined with a second to support, and a third to accent the color palette.</p>
+                    <p>Analogous color schemes create a visually pleasing and calming display. For instance, the color blue can pair nicely with both teal and green. However, analogous color schemes provide a low-contrast experience, since all colors fall in line with one another. They shouldn’t be used for content that needs the user’s direct attention, but they can be used to create backgrounds that do not compete with the main content of the site.</p>
+                    <strong><li>Triadic</li></strong>
+                    <p>Triadic color schemes, much like complementary schemes, provide additional pops of color while allowing for some flexibility in the range you can use. These consist of three colors that are equidistant from each other on the color wheel. Triadic color schemes are useful in that they create a sense of equality, vibrancy, and security in your designs.</p>
+                </ol>
+                <h3>Color Psychology</h3>
                 <p>Each color has a specific meaning (both positive and negative), which can evoke emotions from a user. For instance, here’s a list of words often associated with colors:</p>
                 <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/Color Psychology.png" width="700" height="600" alt="BorderBox">
-<!--Typography--> 
+                <h3>Color for UI</h3>
+                <ul>
+                    <strong><li>Contrast Constraints</li></strong>
+                    <p>When thinking about and applying contrast to a page through the use of color, it’s important to limit the overall amount of contrast. This helps you as the designer to highlight only the most important parts of the page—the actions you want the users to focus on and take.</p>
+                    <p>Having a neutral background (any color with low lightness or saturation) is a good base, because it allows you to add high contrast to the parts of the site where you want to direct a user’s attention. Similarly, a dark background with light colored text can be a reasonable alternative, depending on the assets like image or video, that you are displaying on the site.</p>
+                    <strong><li>Accent Color: Buttons</li></strong>
+                    <p>In addition to selecting the right color for your buttons, there are different states a button has as the user interacts with them. These different states provide a visible signal to the user that an interaction is or is not possible. Two common states used are the hover state and the disabled state.</p>
+                    <p>The hover state typically features a shade or tint of the accent color used for the buttons. This helps a user comprehend that something is happening as they scroll over top of an action. As a designer, you must also consider how to communicate to your users that a button has been disabled and is no longer actionable. The disabled state implies that the button cannot be clicked, either because it’s not an active button or the user must complete steps prior to the button activating.</p>
+                </ul>
+
         </div>
+<!--Typography--> 
         <div class="typography" id="d">
             <h2>4. Typography</h2>
             <p>When setting typefaces on a web page, keep the following points in mind:</p>
-            <ol>
+            <ul>
                 <li>The font specified in a stylesheet must be installed on a user’s computer in order for that font to display when a user visit the web page. We’ll learn how to work around this issue in a later exercise.</li>
                 <li>It’s a good practice to limit the number of typefaces used on a web page to 2 or 3.</li>
                 <li>When the name of a typeface consists of more than one word, it must be enclosed in double quotes (otherwise it will not be recognized).</li>
-            </ol>
-            <p><strong>Fonts:</strong>When using numeric weights, there are a number of default font weights that we can use:</p>
-            <ol>
-                <li>400 is the default font-weight of most text.</li>
-                <li>700 signifies a bold font-weight.</li>
-                <li>300 signifies a light font-weight.</li>
-            </ol>
-            <p><strong>Word spacing:</strong> You can also increase the spacing between words in a body of text, technically known as word spacing. To do so, you can use the word-spacing property.</p>
-            <p><strong>Letter Spacing:</strong>The technical term for adjusting the spacing between letters is called tracking. Tracking can be adjusted with the letter-spacing property in CSS.</p>
-            <p><strong>Text Transformation:</strong>Text can also be styled to appear in either all uppercase or lowercase with the text-transform property.</p>
-            <p><strong>Text Alignment:</strong>No matter how much styling is applied to text (typeface, size, weight, etc.), text always appears on the left side of the browser. To move, or align, text, we can use the text-align property.</p>
-            <p><strong>Fallback Fonts:</strong>Most computers have a small set of typefaces pre-installed. This small set includes serif fonts like Times New Roman and sans-serif fonts like Arial. These pre-installed fonts serve as fallback fonts if the stylesheet specifies a font which is not installed on a user’s computer.</p>
-            <p><strong>Linking fonts</strong>With the number of fonts available with modern typography, it is unrealistic to expect users to have all fonts installed on their computers. New fonts are often centralized in directories made available for public use. We refer to these fonts as non-user fonts. When we have the link to the font and the styles of our choice, we can add the font to the "head" section of the HTML document, using the "link" tag and the href property.</p>
-            <p> CSS offers a way to import fonts directly into stylesheets with the @font-face property. To load fonts with the @font-face property:
-             <ol>
-                <li>Instead of using the font’s link in the HTML document, enter the link into the URL bar in the browser.</li>
-                <li>The browser will load the CSS rules. You will need to focus on the rules that are directly labeled as /* latin */. Some of the latin rules are on separate lines. You will need each of these.</li>
-                <li>Copy each of the CSS rules labeled latin, and paste the rules from the browser to the top of style.css.</li>
-            </ol>
-            <p>It is important to stress the need to copy the @font-face rules to the top of the stylesheet for the font to load correctly in the project.</p>
+            </ul>
+            
+                <h3>Fonts</h3>
+                <p>When using numeric weights, there are a number of default font weights that we can use:</p>
+                <ul>
+                    <li>400 is the default font-weight of most text.</li>
+                    <li>700 signifies a bold font-weight.</li>
+                    <li>300 signifies a light font-weight.</li>
+                </ul>
+                <h3>Word spacing</h3>
+                <p>You can also increase the spacing between words in a body of text, technically known as word spacing. To do so, you can use the <b>word-spacing </b>property.</p>
+                <h3>Letter spacing</h3>
+                <p>The technical term for adjusting the spacing between letters is called tracking. Tracking can be adjusted with the <b>letter-spacing</b> property in CSS.</p>
+                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/text design diagram tracking.svg" style="width: 400px; height: 400px;" alt="text tracking diagram">
+                <h3>Line height</h3>
+                <p>Line height, also known as <em>Leading</em>, refers to the distance between two lines of text. Adjusting this value has a huge impact on the legibility of your site.</p>
+                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/text design diagram leading.svg" style="width: 400px; height: 400px;"  alt="text leading">
+                <h3>Kerning</h3>
+                <p>Kerning is the space between two letters in the text. You typically will not need to worry about kerning because a well-designed typeface already has optimal kerning built in. It is most important when you want to adjust the kerning in a title or header to achieve the design you want.</p>
+                <h3>Text Transformation</h3>
+                <p>Text can also be styled to appear in either all uppercase or lowercase with the <b>text-transform</b> property.</p>
+                <h3>Text Alignment</h3>
+                <p>No matter how much styling is applied to text (typeface, size, weight, etc.), text always appears on the left side of the browser. To move, or align, text, we can use the <b>text-align</b> property.</p>
+                <h3>Fallback Fonts</h3>
+                <p>Most computers have a small set of typefaces pre-installed. This small set includes serif fonts like Times New Roman and sans-serif fonts like Arial. These pre-installed fonts serve as fallback fonts if the stylesheet specifies a font which is not installed on a user’s computer.</p>
+                <h3>Linking fonts</h3>
+                <p>With the number of fonts available with modern typography, it is unrealistic to expect users to have all fonts installed on their computers. New fonts are often centralized in directories made available for public use. We refer to these fonts as non-user fonts. When we have the link to the font and the styles of our choice, we can add the font to the "head" section of the HTML document, using the "link" tag and the href property. <br>
+                    CSS offers a way to import fonts directly into stylesheets with the font-face property. To load fonts with the font-face property:
+                <ul>
+                    <li>Instead of using the font’s link in the HTML document, enter the link into the URL bar in the browser.</li>
+                    <li>The browser will load the CSS rules. You will need to focus on the rules that are directly labeled as /* latin */. Some of the latin rules are on separate lines. You will need each of these.</li>
+                    <li>Copy each of the CSS rules labeled latin, and paste the rules from the browser to the top of style.css.</li>
+                </ul>
+                </p>It is important to stress the need to copy the font-face rules to the top of the stylesheet for the font to load correctly in the project.</p>
         </div>
+<!--Box Model-->  
         <div class="box model" id="e">
-            <h2>Box Model</h2>
-            <P>All elements on a web page are interpreted by the browser as “living” inside of a box. This is what is meant by the box model. The box model comprises the set of properties which define parts of an element that take up space on a web page. The model includes the content area’s size (width and height) and the element’s padding, border, and margin. The properties include:</P>
-            <ol>
-                <li>Width and height — specifies the width and height of the content area.</li>
-                <li>Padding — specifies the amount of space between the content area and the border.</li>
-                <li>Border — specifies the thickness and style of the border surrounding the content area and padding.</li>
-                <li>Margin — specifies the amount of space between the border and the outside edge of the element.</li>
-            </ol>
-            <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/BoxModel.png" style="width: 400px; height: 400px;" alt="BoxModel">
-            <p><strong>Height and Width:</strong>An element’s content has two dimensions: a height and a width. By default, the dimensions of an HTML box are set to hold the raw contents of the box.</p>
-            <p><strong>Borders:</strong>A border is a line that surrounds an element, like a frame around a painting. Borders can be set with a specific width, style, and color.</p>
-            <ol>
-                <li>width — The thickness of the border. A border’s thickness can be set in pixels or with one of the following keywords: thin, medium, or thick.</li>
-                <li>style — The design of the border. Web browsers can render any of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values">10 different styles</a>. Some of these styles include: none, dotted, and solid.</li>
-                <li>color — The color of the border. Web browsers can render colors using a few different formats, including <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">140 built-in color keywords.</a></li>
-            </ol>
-            <p>The default border is medium none color, where color is the current color of the element. If width, style, or color are not set in the CSS file, the web browser assigns the default value for that property.</p>
-            <p><strong>Border Radius: </strong>You can modify the corners of an element’s border box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height and then setting the radius equal to the distance between the center of the circle and the width of the box, which is 50%.</p>
-            <p><strong>Padding: </strong>The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it. In CSS, you can modify this space with the padding property.</p>
-            <p>If you want to be more specific about the amount of padding on each side of a box’s content, you can use the following properties:</p>
-            <ol>
-                <li>padding-top</li>
-                <li>padding-right</li>
-                <li>padding-bottom</li>
-                <li>padding-left</li>
-            </ol>
-                <p>Another implementation of the padding property lets you specify exactly how much padding there should be on each side of the content in a single declaration. Example: "padding:6px 11px 4px 9px;" In the example, the four values 6px 11px 4px 9px correspond to the amount of padding in a clockwise rotation. In order, it specifies the amount of padding on the top (6 pixels), right (11 pixels), bottom (4 pixels), and left (9 pixels) sides of the content.</p>
-                <p>However, if the top and bottom values for padding will equal each other, and the left and right values for padding will also equal each other, you can use the following shortcut: "padding: 5px 10px;" The first value, 5px, sets the padding value for the top and bottom sides of the content. The second value, 10px, sets the padding value for the left and right sides of the content.</p>
-                <p><strong>Margings: </strong>Margin refers to the space directly outside of the box. The margin property is used to specify the size of this space.</p>
-                <p>Just as with Padding, if you want to be even more specific about the amount of margin on each side of a box, you can use the following properties:</p>
-                    <ol>
+            <h2>5. Box Model</h2>
+                <h3>Proporties</h3>
+                <P>All elements on a web page are interpreted by the browser as “living” inside of a box. This is what is meant by the box model. The box model comprises the set of properties which define parts of an element that take up space on a web page.</p>
+                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/BoxModel.png" style="width: 400px; height: 400px;" alt="BoxModel">
+                <ul>
+                    <strong><li>Height and Width</li></strong>
+                    <p>An element’s content has two dimensions: a height and a width. By default, the dimensions of an HTML box are set to hold the raw contents of the box.</p>
+                    <strong><li>Borders</li></strong>
+                    <p>A border is a line that surrounds an element, like a frame around a painting. Borders can be set with a specific width, style, and color.</p>
+                    <ul>
+                        <li><strong>width</strong> — The thickness of the border. A border’s thickness can be set in pixels or with one of the following keywords: thin, medium, or thick.</li>
+                        <li><strong>style</strong> — The design of the border. Web browsers can render any of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values">10 different styles</a>. Some of these styles include: none, dotted, and solid.</li>
+                        <li><strong>color</strong> — The color of the border. Web browsers can render colors using a few different formats, including <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">140 built-in color keywords.</a></li>
+                    </ul>
+                    <p>The default border is medium none color, where color is the current color of the element. If width, style, or color are not set in the CSS file, the web browser assigns the default value for that property.</p>
+                    <strong><li>Border radius</li></strong>
+                    <p>You can modify the corners of an element’s border box with the <b>border-radius</b> property. You can create a border that is a perfect circle by first creating an element with the same width and height and then setting the radius equal to the distance between the center of the circle and the width of the box, which is 50%.</p>
+                    <strong><li>Padding</li></strong>
+                    <p>he space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it. In CSS, you can modify this space with the <b>padding</b> property.</p>
+                    <p>If you want to be more specific about the amount of padding on each side of a box’s content, you can use the following properties:</p>
+                    <ul>
+                        <li>padding-top</li>
+                        <li>padding-right</li>
+                        <li>padding-bottom</li>
+                        <li>padding-left</li>
+                    </ul>
+                    <p>Another implementation of the padding property lets you specify exactly how much padding there should be on each side of the content in a single declaration. Example: "padding:6px 11px 4px 9px;" In the example, the four values 6px 11px 4px 9px correspond to the amount of padding in a clockwise rotation. In order, it specifies the amount of padding on the top (6 pixels), right (11 pixels), bottom (4 pixels), and left (9 pixels) sides of the content.</p>
+                    <p>However, if the top and bottom values for padding will equal each other, and the left and right values for padding will also equal each other, you can use the following shortcut: "padding: 5px 10px;" The first value, 5px, sets the padding value for the top and bottom sides of the content. The second value, 10px, sets the padding value for the left and right sides of the content.</p>
+                    <strong><li>Margin</li></strong>
+                    <p>Margin refers to the space directly outside of the box. The margin property is used to specify the size of this space.</p>
+                    <p>Just as with Padding, if you want to be even more specific about the amount of margin on each side of a box, you can use the following properties:</p>
+                    <ul>
                         <li>margin-top</li>
                         <li>margin-right</li>
                         <li>margin-bottom</li>
                         <li>margin-left</li>
-                    </ol>
-                <p>Just like with padding, margin can also be put in a single declaration. See above.</p>
-                <p>The margin property also lets you center content. However, you must follow a few syntax requirements. Take a look at the following example: margin: 0 auto;. In the example above, margin: 0 auto; will center the divs in their containing elements. The 0 sets the top and bottom margins to 0 pixels. The auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element. The div elements in the example above should center within an element that fills the page, but this doesn’t occur. Why? In order to center an element, a width must be set for that element. Otherwise, the width of the div will be automatically set to the full width of its containing element, like the "body", for example. It’s not possible to center an element that takes up the full width of the page.</p>
-                <p><strong>Margin Collapse: </strong>Horizontal margins (left and right), like padding, are always displayed and added together. Unlike horizontal margins, vertical margins do not add. Instead, the larger of the two vertical margins sets the distance between adjacent elements.</p>
-                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/MarginCollapse.svg" width="600" height="600">
-                <p><strong>Minimum and Maximum Height and Width: </strong>Because a web page can be viewed through displays of differing screen size, the content on the web page can suffer from those changes in size. To avoid this problem, CSS offers two properties that can limit how narrow, wide, long or short an element’s box can be sized to:</p>
+                    </ul>
+                    <p>Just like with padding, margin can also be put in a single declaration. See above.</p>
+                    <p><strong>Auto:</strong> The margin property also lets you center content. However, you must follow a few syntax requirements:  margin: 0 auto;. This will center the divs in their containing elements. The 0 sets the top and bottom margins to 0 pixels. The auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element.</p>
+                    <p><strong>Margin Collapse: </strong>Horizontal margins (left and right), like padding, are always displayed and added together. Unlike horizontal margins, vertical margins do not add. Instead, the larger of the two vertical margins sets the distance between adjacent elements.</p>
+                    <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/MarginCollapse.svg" width="600" height="600">
+                    <strong><li>Minimum and Maximum Height and Width</li></strong>
+                    <p>Because a web page can be viewed through displays of differing screen size, the content on the web page can suffer from those changes in size. To avoid this problem, CSS offers two properties that can limit how narrow, wide, long or short an element’s box can be sized to:</p>
+                    <ul>
+                        <li><strong>min-width</strong> — this property ensures a minimum width of an element’s box.</li>
+                        <li><strong>max-width</strong> — this property ensures a maximum width of an element’s box.</li>
+                        <li><strong>min-height</strong> — this property ensures a minimum height for an element’s box.</li>
+                        <li><strong>max-height</strong> — this property ensures a maximum height of an element’s box.</li>
+                    </ul><br>
+                    <strong><li>Overflow</li></strong>
+                    <p>The overflow property controls what happens to content that spills, or overflows, outside its box. It can be set to one of the following values:</p>
                     <ol>
-                        <li>min-width — this property ensures a minimum width of an element’s box.</li>
-                        <li>max-width — this property ensures a maximum width of an element’s box.</li>
-                        <li>min-height — this property ensures a minimum height for an element’s box.</li>
-                        <li>max-height — this property ensures a maximum height of an element’s box.</li>
-                    </ol>
-                <p><strong>Overflow: </strong>The overflow property controls what happens to content that spills, or overflows, outside its box. It can be set to one of the following values:</p>
+                        <li><strong>hidden</strong> - when set to this value, any content that overflows will be hidden from view.</li>
+                        <li><strong>scroll</strong> - when set to this value, a scrollbar will be added to the element’s box so that the rest of the content can be viewed by scrolling.</li>
+                        <li><strong>visible</strong> - when set to this value, the overflow content will be displayed outside of the containing element. Note, this is the default value.</li>
+                    </ol><br>
+                    <strong><li>Resetting Defaults</li></strong>
+                    <p>All major web browsers have a default stylesheet they use in the absence of an external stylesheet. These default stylesheets are known as user agent stylesheets. In this case, the term “user agent“ is a technical term for the browser.</p> 
+                    <p>developers choose to reset these default values so that they can truly work with a clean slate: take "*" as a selector and put margin and padding equeal to 0. It is often the first CSS rule in an external stylesheet.</p>
+                    <strong><li>Visibility</li></strong>
+                    <p>Elements can be hidden from view with the visibility property. The visibility property can be set to one of the following values:</p>
                     <ol>
-                        <li>hidden - when set to this value, any content that overflows will be hidden from view.</li>
-                        <li>scroll - when set to this value, a scrollbar will be added to the element’s box so that the rest of the content can be viewed by scrolling.</li>
-                        <li>visible - when set to this value, the overflow content will be displayed outside of the containing element. Note, this is the default value.</li>
-                    </ol>
-                <p><strong>Resetting Defaults: </strong>All major web browsers have a default stylesheet they use in the absence of an external stylesheet. These default stylesheets are known as user agent stylesheets. In this case, the term “user agent“ is a technical term for the browser. Many developers choose to reset these default values so that they can truly work with a clean slate: take "*" as a selector and put margin and padding equeal to 0. It is often the first CSS rule in an external stylesheet.</p>
-                <p><strong>Visibility: </strong>Elements can be hidden from view with the visibility property. The visibility property can be set to one of the following values:</p>
-                    <ol>
-                        <li>hidden — hides an element.</li>
-                        <li>visible — displays an element.</li>
-                    </ol>
-                <p>Note: What’s the difference between display: none and visibility: hidden? An element with display: none will be completely removed from the web page. An element with visibility: hidden, however, will not be visible on the web page, but the space reserved for it will.</p>
+                        <li><strong>hidden</strong> — hides an element.</li>
+                        <li><strong>visible</strong> — displays an element.</li>
+                    </ol><br>
+                    <strong>Box sizing</strong>
+                    <p>In CSS, the box-sizing property controls the type of box model the browser should use when interpreting a web page. The default value of this property is content-box. This is the same box model that is affected by border thickness and padding.</p>
+                    <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/ContentBox.svg" width="600" height="600" alt="ContentBox">
+                    <p>Fortunately, we can reset the entire box model and specify a new one: <b>border-box</b>. For this we take "*" as an selector and set the following declaration: box-sizing: border-box</p>
+                    <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/BorderBox.svg" width="600" height="600" alt="BorderBox">
+                </ul>
         </div>
-        <div class="content box" id="f">
-            <h2>Box Model: Content-Box</h2>
-                <p>In CSS, the box-sizing property controls the type of box model the browser should use when interpreting a web page. The default value of this property is content-box. This is the same box model that is affected by border thickness and padding.</p>
-                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/ContentBox.svg" width="600" height="600" alt="ContentBox">
-                <p>Fortunately, we can reset the entire box model and specify a new one: border-box. For this we take "*" as an selector and set the following declaration: box-sizing: border-box</p>
-                <img src="/Users/yossel/Desktop/coding/Yossel´s Front End- journey/resouces /images/BorderBox.svg" width="600" height="600" alt="BorderBox">
+<!--Positioning-->  
+        <div class="postioning" id="f">
+            <h2>6. Positioning</h2>
+            <p>In addition to the properties that it provides to style HTML elements, CSS includes properties that change how a browser positions elements. These properties specify where an element is located on a page, if the element can share lines with other elements, and other related attributes.</p>
+            <p>The default position of an element can be changed by setting its position property. The position property can take one of four values:</p>
+                <ol>
+                    <strong><li>Static</li></strong>
+                    <p>the default value (it does not need to be specified)</p>
+                    <strong><li>Relative</li></strong>   
+                    <p>The valid offset properties are:</p>
+                    <ul>
+                        <li>top - moves the element down.</li>
+                        <li>bottom - moves the element up.</li>
+                        <li>left - moves the element right.</li>
+                        <li>right - moves the element left.</li>
+                    </ul>        
+                    <p>Units for offset properties can be specified in pixels, ems, or percentages. <b>Note</b> that offset properties will not work if the value of the element’s position property is the default static.</p>
+                    <strong><li>Absolute</li></strong>     
+                    <p>When an element’s position is set to absolute all other elements on the page will ignore the element and act like it is not present on the page. The element will be positioned relative to its closest positioned parent element.</p>
+                    <strong><li>Fixed</li></strong>
+                    <p>We can fix an element to a specific position on the page (regardless of user scrolling) by setting its position to fixed.</p>
+                </ol>
+                <h3>Z-Index</h3>
+                <p>The z-index property controls how far “back” or how far “forward” an element should appear on the web page when elements overlap. This can be thought of the depth of elements, with deeper elements appearing behind shallower elements. The z-index property accepts integer values. Depending on their values, the integers instruct the browser on the order in which elements should be displayed on the web page. The z-index property does not work on static elements.</p>
         </div>
+<!--Disppay-->
         <div class="display" id="g">
-            <h2>CSS display and positioning</h2>
-                <p>In addition to the properties that it provides to style HTML elements, CSS includes properties that change how a browser positions elements. These properties specify where an element is located on a page, if the element can share lines with other elements, and other related attributes.</p>
-                <p><strong>Position: </strong>The default position of an element can be changed by setting its position property. The position property can take one of four values:</p>
-                    <ol>
-                        <li>Static</li>
-                            <p>the default value (it does not need to be specified)</p>
-                        <li>Relative</li>
-                            <p>The valid offset properties are:</p>
-                                <ol>
-                                    <li>top - moves the element down.</li>
-                                    <li>bottom - moves the element up.</li>
-                                    <li>left - moves the element right.</li>
-                                    <li>right - moves the element left.</li>
-                                </ol>
-                            <p>Units for offset properties can be specified in pixels, ems, or percentages. Note that offset properties will not work if the value of the element’s position property is the default static.</p>
-                        <li>Absolute</li>
-                            <p>When an element’s position is set to absolute all other elements on the page will ignore the element and act like it is not present on the page. The element will be positioned relative to its closest positioned parent element.</p>
-                        <li>Fixed</li>
-                            <p>We can fix an element to a specific position on the page (regardless of user scrolling) by setting its position to fixed.</p>
-                    </ol>
-                <p><strong>Z-Index: </strong>The z-index property controls how far “back” or how far “forward” an element should appear on the web page when elements overlap. This can be thought of the depth of elements, with deeper elements appearing behind shallower elements. The z-index property accepts integer values. Depending on their values, the integers instruct the browser on the order in which elements should be displayed on the web page. The z-index property does not work on static elements.</p>
-                <p><strong>Inline Display: </strong>Every HTML element has a default display value that dictates if it can share horizontal space with other elements. Some elements fill the entire browser from left to right regardless of the size of their content. Other elements only take up as much horizontal space as their content requires and can be directly next to other elements. The CSS display property provides the ability to make any element an inline element. This includes elements that are not inline by default such as paragraphs, divs, and headings. There are three possible display values:</p>
-                    <ol>
-                        <li>Inline</li>
-                            <p>The height and width of these elements cannot be specified in the CSS document. For example, the text of an anchor tag ("a") will, by default, be displayed on the same line as the surrounding text, and it will only be as wide as necessary to contain its content. inline elements cannot be altered in size with the height or width CSS properties.</p>
-                        <li>Block</li>
-                            <p>These elements fill the entire width of the page by default, but their width property can also be set. Unless otherwise specified, they are the height necessary to accommodate their content. Elements that are block-level by default include all levels of heading elements ("h1" through "h6"), "p", "div" and "footer"</p>
-                        <li>Inline-block</li>
-                            <p>Inline-block display combines features of both inline and block elements. Inline-block elements can appear next to each other and we can specify their dimensions using the width and height properties. Images are the best example of default inline-block elements.</p>
-                    </ol>
-                    <p>The default display for some tags, such as "em", "strong", and "a", is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content and not requiring a new line after each element. The height and width of these elements cannot be specified in the CSS document. For example, the text of an anchor tag (<a>) will, by default, be displayed on the same line as the surrounding text, and it will only be as wide as necessary to contain its content. inline elements cannot be altered in size with the height or width CSS properties.</p>
-                <p><strong>Float: </strong>If you’re simply interested in moving an element as far left or as far right as possible on the page, you can use the float property. The float property can be set to one of two values:</p>
-                    <ol>
-                        <li>left - this value will move, or float, elements as far left as possible.</li>
-                        <li>right - this value will move elements as far right as possible.</li>
-                    </ol>
-                <p><strong>Clear: </strong>The clear property specifies how elements should behave when they bump into each other on the page. It can take on one of the following values:</P>
-                    <ol>
-                        <li>left — the left side of the element will not touch any other element within the same containing element.</li>
-                        <li>left — the left side of the element will not touch any other element within the same containing element.</li>
-                        <li>both — neither side of the element will touch any other element within the same containing element.</li>
-                        <li>none — the element can touch either side.</li>
-                    </ol>
+            <h2>7. Display</h2>
+                <p>Every HTML element has a default display value that dictates if it can share horizontal space with other elements. Some elements fill the entire browser from left to right regardless of the size of their content. Other elements only take up as much horizontal space as their content requires and can be directly next to other elements.</p> 
+                <p>The CSS display property provides the ability to make any element an inline element. This includes elements that are not inline by default such as paragraphs, divs, and headings. There are three possible display values:</p>
+                <ol>
+                    <strong><li>Inline</li></strong>
+                    <p>The default display for some tags, such as "em", "strong", and "a", is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content and not requiring a new line after each element.</p>
+                    <p>The height and width of these elements cannot be specified in the CSS document. For example, the text of an anchor tag ("a") will, by default, be displayed on the same line as the surrounding text, and it will only be as wide as necessary to contain its content. inline elements cannot be altered in size with the height or width CSS properties.</p>
+                    <strong><li>Block</li></strong>    
+                    <p>These elements fill the entire width of the page by default, but their width property can also be set. Unless otherwise specified, they are the height necessary to accommodate their content. Elements that are block-level by default include all levels of heading elements ("h1" through "h6"), "p", "div" and "footer"</p>
+                    <strong><li>Inline-block</li></strong>
+                    <p>Inline-block display combines features of both inline and block elements. Inline-block elements can appear next to each other and we can specify their dimensions using the width and height properties. Images are the best example of default inline-block elements.</p>
+                </ol>
+                <h3>Float</h3>
+                <p>If you’re simply interested in moving an element as far left or as far right as possible on the page, you can use the float property. The float property can be set to one of two values:</p>
+                <ol>
+                    <li>left - this value will move, or float, elements as far left as possible.</li>
+                    <li>right - this value will move elements as far right as possible.</li>
+                </ol><br>
+                <h3>Clear</h3>
+                <p>The clear property specifies how elements should behave when they bump into each other on the page. It can take on one of the following values:</P>
+                <ul>
+                    <li>left — the left side of the element will not touch any other element within the same containing element.</li>
+                    <li>left — the left side of the element will not touch any other element within the same containing element.</li>
+                    <li>both — neither side of the element will touch any other element within the same containing element.</li>
+                    <li>none — the element can touch either side.</li>
+                </ul><br>
         </div>
-    </div>
+<!--Links and buttons-->
+        <div class="links" id="h">
+            <h2>Links and buttons</h2>
+                <h3>Tooltips and Titles</h3>
+                <p>Additional context can be provided as text using the HTML <b>title</b> attribute. Although the title attribute can be provided to any HTML element, it is often extremely useful as additional context or advisory text for clickable elements.</p>
+                <p>Most browsers will display the text of a title attribute as a tooltip, meaning when a user hovers their cursor over an element, the text will appear in a small box near the cursor.</p>
+                <h3>Hover States and Cursors</h3>
+                <p>The CSS <b>pseudo-class :hover</b> can be used to style elements on mouse hover.</p>
+                <p>In addition to any text style changes when hovering over a link, the user’s cursor should change from the default appearance to a pointing hand. The CSS <b>cursor</b> property is used to control this behavior. <b>Note:</b>  Mobile devices do not generally have on-screen cursors, and users must actually touch the device (and possibly trigger a click event) to interact.</p>
+                <h3>Link States</h3>
+                <p>Links have four main states: normal (not clicked), hover, active (clicked), and visited. These four states have associated CSS pseudo-classes: :link, :hover, :active, and :visited.</p>
+                <p>The ordering of link state pseudo-class rules is important to reveal the proper information. When a user hovers and then clicks a link, those styles should always override the static styling surrounding a user’s history with the link (unvisited :link and :visited). The proper order of these rules is:</p>
+                <ul>
+                    <li>:link</li>
+                    <li>:visited</li>
+                    <li>:hover</li>
+                    <li>:active</li>
+                </ul>
+                <h3>Skeuomorphism and Flat Design</h3>
+                <p>The concept of UI elements that replicate or imitate real-life counterparts is known as <em>skeuomorphism. Flat design</em> is an alternative approach to skeuomorphism which embraces the fact that computer interfaces do not necessarily need to model real-life interfaces. </p>
+                <ul>
+                    <strong><li>Buttons: Skeuomorphic styling</li></strong>
+                    <p>Skeuomorphic button design aims to imitate the appearance and interactivity of a real-life button, often including a ‘raised’ appearance while the button is unpressed and a ‘pressed’ appearance when clicked. Modern CSS3 has support for many 2-D and 3-D effects and animations and can create many skeuomorphic button designs on its own.</p>
+                    <strong><li>Buttons: Flat Design</li></strong>
+                    <p>Flat design is so-called because of its 2-D appearance. In flat designs in particular, button text is very important for clarity—the possibility of user confusion is reduced by pairing buttons with specific, descriptive labels. A button with ‘Click here’ leaves many more open questions than a button that reads ‘Submit form’.</p>
+                </ul>
+                <h3>Buttons: Hover States</h3>
+                <p>Just as with links, buttons should make use of hover states and the cursor: pointer declaration. Users expect buttons to be clickable. Since buttons can consist of any number of total elements (rectangular/circular body, text, image(s)), all elements should be clickable, should display their clickability, and should result in the same behavior.</p>
+        </div>
+        <div id="i">
+            <h2>Secondary navigation</h2>
+                <h3>Primary vs. Secondary navigation aka breadcrumb</h3>
+                <ul>
+                    <li><b>The primary navigation</b> system typically contains the most important links and buttons that need to be displayed on every single page of the site.</li>
+                    <li><b>Secondary navigation, or breadcrumb navigation,</b> usually consists of a clickable list of pages or attributes that led to the current page. It can help users understand the extent of the site and also where they are currently.</li>
+                    <li>Breadcrumbs are usually displayed as a horizontal list of pages and take up minimal space. Users expect to find them in the header, left-aligned, and below any primary navigation. Typically they are separated with a “>” or a “/“ symbol. Instead of having to manually add this to all of the breadcrumbs in our breadcrumb trail, we can use a CSS pseudo-element. ".breadcrumb li+li::before" is the selector that we want! Set the <b>content</b> property to “>” to place the greater than sign between each adjacent breadcrumb.</li>
+                </ul>
+                <h3>Breadcrumb types</h3>
+                <ul>
+                    
+                </ul>
+
+        </div>
+    </body>
 <!--Footer-->
